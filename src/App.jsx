@@ -22,7 +22,6 @@ const PLAYERS = {
 
 function App() {
   const [players, setPlayers] = useState(PLAYERS);
-
   const [gameTurns, setGameTurns] = useState([]);
   const activePlayer = deriveActivePlayer(gameTurns);
 
@@ -43,13 +42,13 @@ function App() {
     });
   }
 
-  function rematchHandler() {
-    setGameTurns([]);
-  }
-
   function changeNameHandler(symbol, newName) {
     setPlayers((prevPlayers) => ({ ...prevPlayers, [symbol]: newName }));
-    console.log("players", players);
+    // console.log("players", players);
+  }
+
+  function rematchHandler() {
+    setGameTurns([]);
   }
 
   return (

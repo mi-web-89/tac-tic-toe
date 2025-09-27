@@ -5,9 +5,8 @@ export default function Player({ initName, symbol, isActive, onChangeName }) {
   const [playerName, setPlayerName] = useState(initName);
 
   function EditingHandler() {
-    // not recomend if update value base old value
+    // setIsEditing(!isEditing); // not recomend if update value base old value
     // karena ini tidak menjamin nilai yang dikembalikan adalah nilai yang terbaru
-    // setIsEditing(!isEditing);
 
     setIsEditing((isEditing) => !isEditing);
 

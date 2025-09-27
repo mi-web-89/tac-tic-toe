@@ -11,7 +11,8 @@ export function deriveActivePlayer(gameTurns) {
 }
 
 export function deriveGambeBoard(initialGameBoard, gameTurns) {
-  let gameBoard = [...initialGameBoard].map((innerArray) => [...innerArray]); // important!! => by reference
+  // [...initialGameBoard] or [...innerArray] important!! => by reference
+  let gameBoard = [...initialGameBoard].map((innerArray) => [...innerArray]); 
 
   // deriving state (jika diletakkan di GameBoard component)
   for (const turn of gameTurns) {
